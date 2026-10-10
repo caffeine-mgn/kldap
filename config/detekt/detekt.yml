@@ -1,0 +1,51 @@
+config:
+  validation: true
+  warningsAsErrors: false
+
+processors:
+  active: true
+
+console-reports:
+  active: true
+
+comments:
+  active: true
+
+complexity:
+  TooManyFunctions:
+    active: true
+    allowedFunctionsPerFile: 25
+    allowedFunctionsPerClass: 25
+    allowedFunctionsPerObject: 25
+    allowedFunctionsPerInterface: 25
+    allowedFunctionsPerEnum: 25
+    ignoreDeprecated: true
+    ignorePrivate: true
+    ignoreOverridden: true
+
+empty-blocks:
+  active: true
+
+exceptions:
+  active: true
+
+performance:
+  active: true
+
+potential-bugs:
+  active: true
+
+style:
+  active: true
+  MagicNumber:
+    active: false
+  ReturnCount:
+    active: false
+  MaxLineLength:
+    active: false
+  UnusedPrivateFunction:
+    active: true
+  UnusedPrivateProperty:
+    active: true
+  WildcardImport:
+    active: true

@@ -1,0 +1,10 @@
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.kotlin/
+*.iml
+.idea/
+.DS_Store
+local.properties
+out/
+.cortexkit/
