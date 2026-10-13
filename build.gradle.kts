@@ -1,5 +1,6 @@
 import org.gradle.plugins.signing.SigningExtension
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.konan.target.HostManager
 import java.util.Base64
 
 plugins {
@@ -34,10 +35,12 @@ kotlin {
     }
     linuxX64()
     mingwX64()
-    macosArm64()
-    iosArm64()
-    iosSimulatorArm64()
-    iosX64()
+    if (HostManager.hostIsMac) {
+        macosArm64()
+        iosArm64()
+        iosSimulatorArm64()
+        iosX64()
+    }
 
     sourceSets {
         commonMain.dependencies {
@@ -45,7 +48,7 @@ kotlin {
             api(libs.kotlinx.io.bytestring)
             api(libs.kotlinx.atomicfu)
             api(libs.ktor.network)
-            api(libs.ktor.network.tls)
+            implementation("pw.binom:tls:0.1.0-SNAPSHOT")
         }
         commonTest.dependencies {
             implementation(kotlin("test"))

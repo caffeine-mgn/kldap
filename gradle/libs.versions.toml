@@ -15,7 +15,6 @@ kotlinx-io-core = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.re
 kotlinx-io-bytestring = { module = "org.jetbrains.kotlinx:kotlinx-io-bytestring", version.ref = "kotlinx-io" }
 kotlinx-atomicfu = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "kotlinx-atomicfu" }
 ktor-network = { module = "io.ktor:ktor-network", version.ref = "ktor" }
-ktor-network-tls = { module = "io.ktor:ktor-network-tls", version.ref = "ktor" }
 testcontainers-openldap = { module = "org.testcontainers:openldap", version.ref = "testcontainers" }
 testcontainers-junit = { module = "org.testcontainers:junit-jupiter", version.ref = "testcontainers" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }

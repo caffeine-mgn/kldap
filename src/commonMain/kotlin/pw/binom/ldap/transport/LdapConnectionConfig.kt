@@ -23,6 +23,12 @@ public class LdapConnectionConfig {
     public var serverName: String? = null
 
     /**
+     * When `true`, TLS peer certificates are accepted without verification.
+     * **Never use in production** — intended for tests against self-signed servers.
+     */
+    public var trustAll: Boolean = false
+
+    /**
      * Coroutine context used for the underlying socket's selector and (for TLS) the
      * TLS coroutine. Defaults to [EmptyCoroutineContext] — the caller is expected to
      * dispatch on `Dispatchers.IO` themselves. The LdapClient wraps this into a
